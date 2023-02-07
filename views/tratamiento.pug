@@ -1,0 +1,29 @@
+extends ./layout/index
+
+block content 
+    main.container.mt-5
+    h1.text-center.mb-5 #{result.nombre}
+    .row
+        .col-md-6
+            img(src=`/img/tratamientos/${result.imagen}`, alt=`tratamiento de ${result.nombre}` class="img-fluid")
+        .col-md-6
+            p #{result.descripcion}
+
+            ul.list-unstyled
+                li 
+                    svg.icon.icon-tabler.icon-tabler-clock(xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewbox='0 0 24 24' stroke-width='1.5' stroke='#F8CBCA' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        circle(cx='12' cy='12' r='9')
+                        polyline(points='12 7 12 12 15 15') 
+                    span.pl-2 Duracion: 1 Hora
+                li 
+                    svg.icon.icon-tabler.icon-tabler-receipt-2(xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewbox='0 0 24 24' stroke-width='1.5' stroke='#F8CBCA' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        path(d='M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2')
+                        path(d='M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5')
+                    span.pl-2 Precio: 50 €
+                li 
+                    svg.icon.icon-tabler.icon-tabler-check(xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewbox='0 0 24 24' stroke-width='1.5' stroke='#F8CBCA' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        path(d='M5 12l5 5l10 -10')
+                    span.pl-2 Beneficios: #{result.beneficios}

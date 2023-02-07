@@ -1,0 +1,336 @@
+:root {
+  font-family: "Catamaran", cursive;
+  font-family: "Catamaran", cursive;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  font-family: "Catamaran", "Open Sans", sans-serif;
+  height: 100vh;
+}
+h1,
+h2,
+h3 {
+  font-family: "Catamaran", cursive;
+  color: #f8cbca;
+}
+h1 {
+  font-size: 3.4rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+.btn-success {
+  background-color: black;
+  border-color: black;
+  padding: 0.8rem 0;
+  text-transform: uppercase;
+  border-radius: 0.8rem;
+}
+.btn-success:hover {
+  background-color: rgb(184, 5, 73);
+  border-color: rgb(192, 7, 78);
+}
+.slider {
+  background-color: rgb(248, 203, 202);
+  background: url(../img/hero-image-web.jpg);
+  background-position: center;
+  min-height: 600px;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.slider h1 {
+  color: white;
+}
+.slider em {
+  font-family: "Catamaran", cursive;
+  font-size: 4rem;
+  order: -1;
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 768px) {
+  .slider em {
+    font-size: 8rem;
+  }
+}
+.home {
+  position: relative;
+}
+.home .navegacion {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.nav-link.active {
+  border-bottom: 5px solid white;
+}
+blockquote {
+  font-weight: bold;
+  line-height: 2;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.navegacion {
+  /* background-color: #f7cac9, */
+  background-color: rgb(248, 203, 202);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+header .nav a {
+  font-family: "Catamaran", cursive;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: black;
+  z-index: 10000;
+}
+footer {
+  margin-top: 100px;
+}
+footer .nav a,
+.copyright {
+  font-family: "Catamaran", cursive;
+  font-size: 1.6rem;
+  color: black;
+}
+.listado-iconos {
+  margin-top: 60px;
+}
+.listado-iconos img {
+  height: 100px;
+}
+
+.descuento {
+  height: 400px;
+  margin-top: 4em;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(248, 203, 202, 0.6) 100%
+    ),
+    url(../img/cupon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .descuento {
+    height: 400px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(248, 203, 202, 0.6) 100%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url(../img/cupon.png);
+  }
+}
+.descuento .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  color: white;
+}
+.descuento p {
+  font-family: "Catamaran", cursive;
+  line-height: 0.8;
+}
+.descuento .titulo {
+  font-size: 2.4rem;
+}
+.descuento .precio {
+  color: #15b9d5;
+  font-size: 3rem;
+}
+
+.proximos-viajes p {
+  font-size: 0.9rem;
+}
+i {
+  color: #dc135f;
+  font-size: 2rem;
+}
+
+.testimoniales p {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+.testimoniales p::before {
+  background-image: url(../img/quote.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px;
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-bottom: 1rem;
+}
+.blockquote-footer {
+  text-align: right;
+  color: #dc135f;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 4px 10px;
+  font-size: 1em;
+}
+
+.border-right {
+  border-right: 1px solid rgb(0, 0, 0) !important;
+}
+
+/* .............................................................................. */
+
+footer {
+  background-color: #f8cbca;
+}
+
+.logo {
+  max-height: 90px;
+}
+
+.bg-about-section {
+  background-position: center;
+  background-size: cover;
+  padding: 22px 0px 0px 0px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1051%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(248%2c 203%2c 202%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c445.05C94.808%2c445.753%2c199.054%2c485.097%2c278.42%2c433.231C357.743%2c381.393%2c361.024%2c269.045%2c400.879%2c183.075C441.018%2c96.493%2c521.661%2c21.253%2c513.489%2c-73.829C505.243%2c-169.763%2c427.265%2c-243.251%2c358.447%2c-310.596C293.965%2c-373.698%2c216.083%2c-416.421%2c131.453%2c-447.688C41.55%2c-480.903%2c-51.756%2c-514.826%2c-145.913%2c-496.934C-244.604%2c-478.18%2c-340.025%2c-427.202%2c-400.091%2c-346.681C-458.556%2c-268.307%2c-480.673%2c-163.838%2c-466.569%2c-67.083C-453.937%2c19.576%2c-359.168%2c67.932%2c-327.738%2c149.673C-293.032%2c239.935%2c-347.612%2c364.377%2c-275.778%2c429.119C-205.965%2c492.039%2c-93.98%2c444.353%2c0%2c445.05' fill='%23f5b8b6'%3e%3c/path%3e%3cpath d='M1440 921.6279999999999C1512.791 926.509 1589.518 927.53 1652.087 890.014 1715.434 852.0319999999999 1750.042 782.765 1782.3600000000001 716.35 1815.375 648.502 1856.415 576.188 1840.7060000000001 502.387 1825.199 429.538 1758.3690000000001 381.325 1700.949 333.887 1651.107 292.71 1591.246 272.729 1531.842 247.21499999999997 1463.548 217.88299999999998 1399.496 159.70800000000003 1326.368 173.003 1252.471 186.437 1189.758 247.406 1157.555 315.26 1127.685 378.199 1177.82 452.21 1161.693 519.985 1142.916 598.893 1038.53 655.761 1057.781 734.554 1076.132 809.665 1175.989 828.754 1245.437 862.745 1307.556 893.149 1370.995 917.001 1440 921.6279999999999' fill='%23fbdfde'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1051'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.color-dark {
+  color: black;
+}
+
+.align-item-bottom {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.tarjet {
+  background: rgb(255 255 255 / 80%);
+  padding: 60px 40px;
+  margin-bottom: 80px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.card {
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+}
+
+.pedir-cita {
+  border: 1px solid;
+  border-radius: 6px;
+}
+
+/* ANIMACION FADE IN */
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* carrousel------------------------------------------------------------- */
+
+.review-carousel {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+.review-slide {
+  display: none;
+}
+.review-content {
+  padding: 10px;
+}
+.reviewer-info {
+  padding: 10px;
+}
+.arrow {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 3px 3px 0;
+}
+.left {
+  left: 8px;
+  background-color: #ddd;
+}
+.right {
+  right: 8px;
+  background-color: #ddd;
+}
