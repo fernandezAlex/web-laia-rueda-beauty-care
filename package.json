@@ -4,7 +4,8 @@
   "description": "Corporation web page",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js --ext *"
+    "dev": "nodemon index.js --ext *",
+    "start": "node index.js"
   },
   "type": "module",
   "repository": {
