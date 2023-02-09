@@ -9,9 +9,9 @@ import connectLiveReload from "connect-livereload";
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
-
 const app = express();
-const DB_PORT = process.env.DB_PORT || 4000;
+const PORT = process.env.PORT || 4000;
+console.log(PORT);
 
 // Conect data base
 db.authenticate()
@@ -52,6 +52,6 @@ app.use(express.static("public"));
 // add router
 app.use("/", router);
 
-app.listen(DB_PORT, () => {
-  console.log(`el servidor esta funcionando en el puerto ${DB_PORT}`);
+app.listen(PORT, () => {
+  console.log(`el servidor esta funcionando en el puerto ${PORT}`);
 });
