@@ -11,7 +11,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 const app = express();
 const PORT = process.env.DB_PORT || 4000;
-console.log(PORT);
+console.log(process.env.PORT);
 
 // Conect data base
 db.authenticate()
