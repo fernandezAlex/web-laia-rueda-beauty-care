@@ -11,7 +11,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const DB_PORT = process.env.DB_PORT || 4000;
 
 // Conect data base
 db.authenticate()
@@ -52,6 +52,6 @@ app.use(express.static("public"));
 // add router
 app.use("/", router);
 
-app.listen(PORT, () => {
-  console.log(`el servidor esta funcionando en el puerto ${PORT}`);
+app.listen(DB_PORT, () => {
+  console.log(`el servidor esta funcionando en el puerto ${DB_PORT}`);
 });
