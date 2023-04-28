@@ -3,13 +3,16 @@ const content = {
     title: "Transformando tu belleza, transformando tu vida",
   },
   nosotros: {
-    title: "Nosotros",
+    title: "Sobre mi",
   },
   tratamientos: {
     title: "Tratamientos",
   },
   testimonios: {
     title: "Testimonios",
+  },
+  contacto: {
+    title: "Pide cita",
   },
 };
 export default content;

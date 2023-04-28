@@ -45,6 +45,7 @@ app.use((req, res, next) => {
 
 // add body parse to get the body data in the request of the post form action
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // define public folder to static files
 app.use(express.static("public"));

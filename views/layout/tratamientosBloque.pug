@@ -14,4 +14,4 @@
                                         path(d='M17.2 7a6 7 0 1 0 0 10')
                                         path(d='M13 10h-8m0 4h8') 
                         p= treatment.descripcion.substr(0,100) + '...'
-                        a(href=`tratamientos/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-success btn-block") Más información
+                        a.servicios-info(href=`tratamientos/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-block") Más información

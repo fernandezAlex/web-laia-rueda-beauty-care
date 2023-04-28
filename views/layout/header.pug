@@ -1,16 +1,30 @@
 header
     .navegacion
         .row.justify-content-center.justify-content-md-between.align-items-center.py-2
-            .col-md-4.col-6 
+            //- Hamburguer menu para versión móvil 
+            .col-2.d-md-none
+                button.navbar-toggler.second-button(type='button', data-toggle='collapse', data-target='#collapseExample', aria-controls='navbarToggleExternalContent10', aria-expanded='false', aria-label='Toggle navigation')
+                    .animated-icon2 
+                        span
+                        span
+                        span
+                        span                
+            .col-9.col-md-2 
                 a(href="/")
                     img(src="/img/logo-laia-rueda.png", alt="Laia Rueda logo").logo
-            .col-md-4
-                nav.mt-5.mt-md-0.nav.justify-content-center.justify-content-md-start
-                        a.nav-link(href="/nosotros") Nosotros
-                        a.nav-link(href="/testimonios") Testimonios
-                        a.nav-link(href="/tratamientos") Tratamientos
-            .col-md-4
+            .col-md-6.d-none.d-md-inline
+                nav.mt-5.mt-md-0.nav.justify-content-center
+                    a.nav-link(href='/sobre-mi') Sobre mi 
+                    a.nav-link(href='/testimonios') Testimonios
+                    a.nav-link(href='/tratamientos') Tratamientos
+                    a.nav-link(href='/contacto') Contacto       
+            .col-md-2.d-none.d-md-inline
                 nav.mt-5.mt-md-0.nav.justify-content-center.justify-content-md-center
-                        a.pedir-cita.nav-link(href="/tratamientos") Pedir Cita
+                        a.pedir-cita.nav-link(href="/contacto") Pedir Cita
 
-
+        #collapseExample.collapse
+            .card.card-body.bg-dark.text-center.text-ligth
+                a.nav-link.btn-block.border-bottom.m-0(href='/sobre-mi') Nosotros
+                a.nav-link.btn-block.border-bottom.m-0(href='/testimonios') Testimonios
+                a.nav-link.btn-block.border-bottom.m-0(href='/tratamientos') Tratamientos
+                a.nav-link.btn-block(href='/contacto') Contacto  

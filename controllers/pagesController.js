@@ -75,3 +75,9 @@ export const reviewsPage = async (req, res) => {
     );
   }
 };
+
+export const contactPage = async (req, res) => {
+  res.render("contact", {
+    content: content.contacto,
+  });
+};

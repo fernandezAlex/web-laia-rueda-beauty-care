@@ -4,35 +4,27 @@ block slider
     .slider.fade-in-image
         //- em Laia Rueda
         //- h1 Laia Rueda
-block content
-    main.container.mt-5
-        .row
-            h1 #{content.title}
-
-            p Bienvenidos a nuestro sitio de tratamientos de belleza. Ofrecemos una amplia variedad de servicios para mejorar su apariencia y sentirse seguros y radiantes. Desde faciales y masajes hasta tratamientos corporales y depilación, nuestro equipo de profesionales está aquí para ayudarlo a alcanzar sus metas de belleza. Trabajamos con los mejores productos y técnicas para garantizar resultados óptimos. Además, ofrecemos paquetes personalizados para satisfacer sus necesidades individuales. Reserve su cita en línea hoy mismo y experimente la diferencia en su belleza y bienestar. ¡Te esperamos!
-
-            p Faciales: Limpieza profunda, exfoliación, hidratación, tratamiento anti-envejecimiento, tratamiento para manchas, tratamiento para acné Masajes: Relajante, drenaje linfático, anti-estrés, reductivo Tratamientos corporales: Exfoliación, hidratación, tratamiento anti-celulitis, tratamiento reductor, tratamiento reafirmante Depilación: Depilación con cera, depilación con hilo, depilación láser Manicura y pedicura: Tratamientos para las uñas, esmaltado permanente Extensiones de pestañas Maquillaje: Maquillaje diario, maquillaje de noche, maquillaje para bodas Peeling químico Tratamientos capilares: Nutrición, hidratación, tratamientos para caída del cabello, tratamientos para alisado y coloración.
-
-            p Faciales: Limpieza profunda, exfoliación, hidratación, tratamiento anti-envejecimiento, tratamiento para manchas, tratamiento para acné Masajes: Relajante, drenaje linfático, anti-estrés, reductivo Tratamientos corporales: Exfoliación, hidratación, tratamiento anti-celulitis, tratamiento reductor, tratamiento reafirmante Depilación: Depilación con cera, depilación con hilo, depilación láser Manicura y pedicura: Tratamientos para las uñas, esmaltado permanente Extensiones de pestañas Maquillaje: Maquillaje diario, maquillaje de noche, maquillaje para bodas Peeling químico Tratamientos capilares: Nutrición, hidratación, tratamientos para caída del cabello, tratamientos para alisado y coloración.
-        
+block content    
+    include ./layout/aboutUsBlock.pug    
+    .container.mt-5.justify-content-center.mb-5    
+        h2.section-header.text-center Servicios
+        include ./layout/tratamientosBloque
+        .row.justify-content-center.mb-2.mt-4.my-5.text-center
+            a.ver-todos(href=`tratamientos`, class="btn btn-success btn-block").text-center Ver Servicios
     .descuento
         .container
             .row 
                 .col-md-6 
                     .contenido 
-                        h3 5% de Descuento 
+                        h3 10% de Descuento 
                         p.titulo Masaje facial 
                         p.fecha Del 20 de Febrero al 17 de Marzo
                         p.precio 40€
-    .container.mt-5    
-        h2 Nuestro Servicios
-        include ./layout/tratamientosBloque
-        .row.justify-content-center.col-md-2.mb-2.mt-4.mb-5.text-center
-            a(href=`tratamientos`, class="btn btn-success btn-block") Ver todos
-
+    .container.mt-5.justify-content-center.mb-5
+        h2.section-header.text-center Opiniones de clientes
         include ./layout/testimoniosBloque.pug
-        .row.justify-content-center.col-md-2.mb-2.mt-5.text-center
-            a(href=`testimonios`, class="btn btn-success btn-block") Ver todos
+        .row.justify-content-center.mb-2.mt-4.my-5.text-center
+                a.ver-todos(href=`testimonios`, class="btn btn-success btn-block").text-center Ver Opiniones
 
     
 
