@@ -1,6 +1,7 @@
 import content from "../constants/content.js";
 import { Treatment } from "../models/Treatments.js";
 import { Testimonial } from "../models/Testimoniales.js";
+import { faqsGenerator } from "../helpers/helpers.js";
 
 export const homePage = async (req, res) => {
   // consult 3 treatments in db in the same time with promise
@@ -46,10 +47,12 @@ export const treatmentPageDetails = async (req, res) => {
   const { tratamiento } = req.params;
   try {
     const result = await Treatment.findOne({ where: { slug: tratamiento } });
-
+    const { preguntas } = result;
+    const faqs = faqsGenerator(preguntas);
     res.render("tratamiento", {
       content: content.tratamientos,
       result,
+      faqs,
     });
   } catch (error) {
     console.log(
@@ -79,5 +82,11 @@ export const reviewsPage = async (req, res) => {
 export const contactPage = async (req, res) => {
   res.render("contact", {
     content: content.contacto,
+  });
+};
+
+export const adminTratamientos = async (req, res) => {
+  res.render("adminTratamientos", {
+    content: content.admin,
   });
 };

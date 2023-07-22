@@ -4316,6 +4316,7 @@ input[type="submit"].btn-block {
   border-radius: calc(0.25rem - 1px);
 }
 .card-img-top {
+  height: 100%;
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
