@@ -17,11 +17,24 @@ export const Treatment = db.define("tratamientos", {
   },
   imagen: {
     type: Sequelize.STRING,
+    // type: Sequelize.BLOB,
   },
   slug: {
     type: Sequelize.STRING,
   },
   beneficios: {
+    type: Sequelize.JSON,
+  },
+  cuidados: {
+    type: Sequelize.JSON,
+  },
+  efectos: {
+    type: Sequelize.STRING,
+  },
+  preguntas: {
+    type: Sequelize.JSON,
+  },
+  duracion: {
     type: Sequelize.STRING,
   },
 });

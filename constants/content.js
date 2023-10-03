@@ -6,13 +6,16 @@ const content = {
     title: "Sobre mi",
   },
   tratamientos: {
-    title: "Tratamientos",
+    title: "Servicios",
   },
   testimonios: {
     title: "Testimonios",
   },
   contacto: {
     title: "Pide cita",
+  },
+  admin: {
+    title: "Administrador Tratamientos",
   },
 };
 export default content;

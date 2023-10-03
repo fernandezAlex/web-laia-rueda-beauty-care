@@ -1,0 +1,50 @@
+extends ./layout/index
+
+block content
+    main.container.mt-5
+        h1(class= "mb-5 text-center") #{content.title}
+        p.mb-5.text-center Agrega la información de tu nuevo tratamiento.
+        .row.mt-5
+            .col-md-12.mt-2
+                h2.d-block.w-100.text-center Agregar un Tratamiento 
+
+            .row.justify-content-center.col.mb-5.mt-8
+                .col-md-8 
+                    form(action="/servicios-administrador" method="POST" enctype="multipart/form-data")
+                        .form-group
+                            label(for="nombre") Nombre 
+                            input#nombre(placeholder="Nombre del Tratamiento" type="text" name="nombre" class="form-control", value= nombre)
+                        .form-group
+                            label(for="precio") Precio 
+                            input#precio(placeholder="Precio del tratamiento" type="text" name="precio" class="form-control", value= precio)
+                        .form-group
+                            label(for="descripcion") Descripción 
+                            textarea#descripcion(placeholder="Descripcion tratamiento" name="descripcion" class="form-control", rows= 3)= descripcion
+                        .form-group
+                            label(for='duracion') Duracion
+                            input#duracion(placeholder='Duracion del tratamiento' type='text' name='duracion' class='form-control', value=duracion)
+                        .form-group
+                            label(for='imagen') Imagen
+                            input#imagen(type='file' placeholder='Sube la imagen del tratamiento' name='imagen' class='form-control-file')
+                        //- .form-group
+                        //-     label(for='slug') Slug
+                        //-     input#slug(placeholder='Nombre que se muestra en la url' type='text' name='slug' class='form-control', value=slug)
+                        .form-group
+                            label(for='beneficios') Beneficios
+                            textarea#beneficios(name='beneficios' class='form-control' placeholder='Beneficios del tratamiento' rows='3')= beneficios
+                        .form-group
+                            label(for='cuidados') Cuidados
+                            textarea#cuidados(name='cuidados' class='form-control' placeholder='Cuidados del tratamiento' rows='3')= cuidados
+                        .form-group
+                            label(for='efectos') Efectos
+                            textarea#efectos(name='efectos' class='form-control' placeholder='Efectos del tratamiento' rows='3')= efectos
+                        .form-group
+                            label(for='preguntas') Preguntas
+                            textarea#preguntas(name='preguntas' class='form-control' placeholder='Preguntas del tratamiento' rows='3')= preguntas
+
+                        .col-md-6
+                        if(errores)
+                            each error in errores 
+                                .alert.col.alert-danger.text-center= error.mensaje
+
+                        input(type="submit").btn.btn-success.btn-block.w-50.text-center
