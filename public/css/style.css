@@ -203,14 +203,27 @@ footer .nav a,
 }
 @media (max-width: 768px) {
   footer .nav a span {
-    font-size: 1em;
+    font-size: 0.7em;
   }
   .align-item-bottom {
     position: relative !important;
   }
   .tarjet {
-    background: rgb(255 255 255 / 80%) !important;
-    padding: 20px 30px !important;
+    padding: 20px 36px !important;
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  }
+
+  .ver-todos {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-size: 2rem;
   }
 }
 
@@ -221,10 +234,7 @@ footer .nav a,
   height: 400px;
   color: white;
 }
-.descuento p {
-  font-family: "Catamaran", cursive;
-  line-height: 0.8;
-}
+
 .descuento .titulo {
   font-size: 2.4rem;
 }
@@ -234,7 +244,8 @@ footer .nav a,
 }
 
 .proximos-viajes p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  hyphens: auto;
 }
 i {
   color: #dc135f;
@@ -280,6 +291,7 @@ footer {
 }
 
 .bg-about-section {
+  width: 100%;
   background-position: center;
   background-size: cover;
   padding: 0px 0px 0px 0px;
@@ -298,11 +310,12 @@ footer {
 
 .tarjet {
   padding: 20px 10px;
-}
-
-.card {
-  height: 100%;
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  padding: 20px 30px !important;
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .pedir-cita {
@@ -399,4 +412,42 @@ footer {
 .right {
   right: 8px;
   background-color: #ddd;
+}
+
+.card-img-container {
+  height: 280px;
+  overflow: hidden;
+}
+
+.img-card-section {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  height: 100%;
+  -webkit-box-shadow: 3px 10px 38px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 10px 38px -17px rgba(0, 0, 0, 0.397);
+  box-shadow: 3px 10px 38px -17px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+.card-bottom {
+  display: flex;
+  margin: 20px 0px;
+}
+
+.pedir-cita-color {
+  width: 40%;
+  margin: 0px 20px;
+  background-color: #ff5678;
+  color: white;
+}
+
+.bg-form {
+  background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23FBDFDE" d="M35.3,-52.4C43.3,-42.8,45.8,-29.2,48.1,-16.9C50.3,-4.5,52.5,6.6,51.9,19.4C51.2,32.2,47.8,46.7,38.7,51.2C29.6,55.7,14.8,50.3,1.6,48.1C-11.6,45.9,-23.2,46.9,-33.4,42.8C-43.6,38.6,-52.3,29.2,-62.1,16.1C-72,3,-83,-13.8,-79.8,-26.6C-76.6,-39.5,-59.2,-48.5,-43.5,-55.7C-27.9,-62.9,-13.9,-68.2,-0.1,-68C13.6,-67.8,27.3,-62.1,35.3,-52.4Z" transform="translate(100 100)" /></svg>');
+  background-size: cover;
 }

@@ -2,7 +2,8 @@ extends ./layout/index
 
 block content
     main.container.mt-5
-        h1(class= "mb-5 text-center") #{content.title}
+        h2(class="section-header mb-5 text-center") #{content.title}
+
         p.mb-5 Consulta las opinions mas recientes de nuestros clientes.
         include ./layout/testimoniosBloque.pug
         .row.mt-5
@@ -14,14 +15,14 @@ block content
                     form(action="/testimonios" method="POST")
                         .form-group
                             label(for="nombre") Nombre 
-                            input#nombre(placeholder="Tu nombre", type="text", name="nombre", class="form-control", value= nombre)
+                            input#nombre(placeholder="Tu nombre" type="text" name="nombre" class="form-control", value= nombre)
                         .form-group
                             label(for="nombre") Correo Electrónico 
-                            input#correo(placeholder="Tu correo",  type="text", name="correo", class="form-control", value= correo)
+                            input#correo(placeholder="Tu correo" type="text" name="correo" class="form-control", value= correo)
                         .form-group
                             label(for="mensaje") Mensaje 
-                            textarea#mensaje(placeholder="Tu opinion", name="mensaje", class="form-control", rows= 3)= mensaje
-                        
+                            textarea#mensaje(placeholder="Tu opinion" name="mensaje" class="form-control", rows= 3)= mensaje
+
                         .col-md-6
                         if(errores)
                             each error in errores 

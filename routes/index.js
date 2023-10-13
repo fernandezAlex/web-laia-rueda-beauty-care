@@ -21,7 +21,7 @@ router.get("/", homePage);
 router.get("/sobre-mi", aboutUsPage);
 
 router.get("/servicios", treatmentsPage);
-router.get("/servicios/:tratamiento", treatmentPageDetails);
+router.get("/servicios/:servicio", treatmentPageDetails);
 
 router.get("/testimonios", reviewsPage);
 router.post("/testimonios", storeTestimonial);

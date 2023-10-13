@@ -3,11 +3,14 @@
     each treatment in treatments
         .col-md-6.col-lg-4.mb-4.mt-4
             .card
-                img.card-img-top(src=`${treatment.imagen}`)
+                .card-img-container
+                    img.card-img-top.img-card-section(src=`${treatment.imagen}`)
                 .card-body
                     .row.border-bottom.mb-4
                         .col-md-12
                             h2= treatment.nombre
-                    p= treatment.descripcion.substr(0,100) + '...' 
-                    //- a.servicios-info(href=`tratamientos/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-block") Más información
-                    a.servicios-info(href=`servicios/${treatment.slug}`, class="btn btn-block") Más información
+                    p= treatment.descripcion.substr(0,112) + '...' 
+                    .card-bottom
+                        //- a.servicios-info(href=`servicios/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-block") Más información
+                        a.servicios-info(href=`servicios/${treatment.slug}`, class="btn btn-block") Más información
+                        a.pedir-cita-color(href=`servicios/${treatment.slug}`, class="btn btn-block") Pedir cita

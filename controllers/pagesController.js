@@ -44,9 +44,9 @@ export const treatmentsPage = async (req, res) => {
 
 // Show a treatment by the slugs
 export const treatmentPageDetails = async (req, res) => {
-  const { tratamiento } = req.params;
+  const { servicio } = req.params;
   try {
-    const result = await Treatment.findOne({ where: { slug: tratamiento } });
+    const result = await Treatment.findOne({ where: { slug: servicio } });
     const { preguntas } = result;
     const faqs = faqsGenerator(preguntas);
     res.render("tratamiento", {

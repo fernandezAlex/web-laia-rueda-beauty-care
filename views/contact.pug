@@ -11,26 +11,26 @@ block content
                     form(action="/contacto" method="POST")
                         .form-group
                             label(for="nombre") Nombre 
-                            input#nombre(placeholder="Tu nombre", type="text", name="nombre", class="form-control", value= nombre, required)
+                            input#nombre(placeholder="Tu nombre" type="text" name="nombre" class="form-control", value= nombre, required)
                         .form-group
                             label(for="apellidos") Apellidos 
-                            input#nombre(placeholder="Tus apellidos", type="text", name="apellidos", class="form-control", value= apellidos, required)
+                            input#nombre(placeholder="Tus apellidos" type="text" name="apellidos" class="form-control", value= apellidos, required)
                         .form-group
                             label(for="nombre") Correo Electrónico 
-                            input#correo(placeholder="Tu correo",  type="text", name="correo", class="form-control", value= correo, required)                  
+                            input#correo(placeholder="Tu correo" type="text" name="correo" class="form-control", value= correo, required)                  
                         .form-group
                             label(for="telefono") Telefono 
-                            input#correo(placeholder="Tu numero de telefono",  type="tel", name="telefono", class="form-control", value= telefono, required)
+                            input#correo(placeholder="Tu numero de telefono" type="tel" name="telefono" class="form-control", value= telefono, required)
                         .form-group
                             label(for="servicio") Elige que servicio te interesa:
-                                select#servicio(name="servicio", class="form-control", rows=3, required)
+                                select#servicio(name="servicio" class="form-control", rows=3, required)
                                     option(value="1") Servicio 1
                                     option(value="2") Servicio 2 
                                     option(value="3") Servicio 3
                         .form-group
                             label(for="mensaje") Mensaje 
-                            textarea#mensaje(placeholder="Información que deseas saber o disponibilidad para tu cita", name="mensaje", class="form-control", rows= 3, required)= mensaje
-                            
+                            textarea#mensaje(placeholder="Información que deseas saber o disponibilidad para tu cita" name="mensaje" class="form-control", rows= 3, required)= mensaje
+
                         .col-md-6
                         if(errores)
                             each error in errores 
