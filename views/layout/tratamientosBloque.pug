@@ -13,8 +13,6 @@
                     .card-bottom
                         //- a.servicios-info(href=`servicios/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-block") Más información
                         a.servicios-info(href=`servicios/${treatment.slug}`, class="btn btn-block") Más información
-                        //- a.pedir-cita-color(href=`${treatment.calendar-url}`, class="btn btn-block")
-                        //- | Pedir cita
                         script.
                             (function() {
                                 var target = document.currentScript;
@@ -28,5 +26,6 @@
                                     });
                                 });
                             })();
+
 
 
