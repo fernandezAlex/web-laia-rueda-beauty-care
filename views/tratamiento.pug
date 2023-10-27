@@ -22,10 +22,11 @@ block content
                             path(d='M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5')
                         h5.d-inline.pl-2 Precio: 
                             strong.d-inline #{result.precio}€
+                    <br/>
+                    a.text-center.mx-0.pedir-cita-color(href=result.calendarUrl, class="btn btn-block") Pedir cita
+
 
                 p #{result.descripcion}
-
-                a.text-center.mx-0.pedir-cita-color(href=`#`, class="btn btn-block") Pedir cita
 
             .container.mt-5.justify-content-center.mb-5
                 h4.my-6 Beneficios de #{result.nombre.toLowerCase()} 
