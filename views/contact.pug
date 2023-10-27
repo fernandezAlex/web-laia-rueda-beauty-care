@@ -3,9 +3,9 @@ extends ./layout/index
 block content
     main.container.mt-5
         h1(class= "mb-5 text-center") #{content.title}
-            p.mb-5 Pide tu cita o contactanos para más información.
-        //- include ./layout/testimoniosBloque.pug
-        .row.mt-5
+            p.mb-5 Contacta para cualquier duda que tengas o si quieres pedir en alguno de mi servicio.
+            h6.toast-message-form #{success}
+        .row.mt-5x
             .row.justify-content-center.col.mb-5.mt-8
                 .col-md-8 
                     form(action="/contacto" method="POST")
@@ -23,13 +23,13 @@ block content
                             input#correo(placeholder="Tu numero de telefono" type="tel" name="telefono" class="form-control", value= telefono, required)
                         .form-group
                             label(for="servicio") Elige que servicio te interesa:
+                            <br>
                                 select#servicio(name="servicio" class="form-control", rows=3, required)
-                                    option(value="1") Servicio 1
-                                    option(value="2") Servicio 2 
-                                    option(value="3") Servicio 3
+                                    each treatment in treatments
+                                        option(value=treatment.nombre) #{treatment.nombre}
                         .form-group
                             label(for="mensaje") Mensaje 
-                            textarea#mensaje(placeholder="Información que deseas saber o disponibilidad para tu cita" name="mensaje" class="form-control", rows= 3, required)= mensaje
+                            textarea#mensaje(placeholder="Tu consulta" name="mensaje" class="form-control", rows= 3, required)= mensaje
 
                         .col-md-6
                         if(errores)

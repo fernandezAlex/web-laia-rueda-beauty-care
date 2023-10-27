@@ -1,6 +1,7 @@
 import content from "../constants/content.js";
 import { Contacto } from "../models/Contacto.js";
 import nodemailer from "nodemailer";
+import { Treatment } from "../models/Treatments.js";
 import dotenv from "dotenv/config";
 
 export const storeContacts = async (req, res) => {
@@ -99,7 +100,13 @@ export const storeContacts = async (req, res) => {
         mensaje,
       });
 
-      res.redirect("/contacto");
+      const treatments = await Treatment.findAll();
+      res.render("contact", {
+        content: content.contacto,
+        treatments,
+        success:
+          "Tu solicitud de información ha sido enviada correctamente, dentro de un plazo 48 horas me pondré en contacto contigo.",
+      });
     } catch (error) {
       console.log(
         "%cerror Contract controller.js line:40 ",

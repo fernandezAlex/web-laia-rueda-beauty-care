@@ -12,7 +12,7 @@ const content = {
     title: "Testimonios",
   },
   contacto: {
-    title: "Pide cita",
+    title: "Solicitar información",
   },
   admin: {
     title: "Administrador Tratamientos",

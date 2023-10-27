@@ -80,9 +80,20 @@ export const reviewsPage = async (req, res) => {
 };
 
 export const contactPage = async (req, res) => {
-  res.render("contact", {
-    content: content.contacto,
-  });
+  try {
+    const treatments = await Treatment.findAll();
+    res.render("contact", {
+      content: content.contacto,
+      treatments,
+      success: "",
+    });
+  } catch (error) {
+    console.log(
+      "%cerror pagesController.js line:14 ",
+      "color: red; display: block; width: 100%;",
+      error
+    );
+  }
 };
 
 export const adminTratamientos = async (req, res) => {

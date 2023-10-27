@@ -467,3 +467,22 @@ footer {
 .DqVnFf {
   right: 12px !important;
 }
+
+.toast-message-form {
+  padding: 15px;
+  background-color: #f8cbca;
+  color: black;
+  animation: fadein 0.8s;
+  font-size: 14px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
