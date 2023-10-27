@@ -37,4 +37,7 @@ export const Treatment = db.define("tratamientos", {
   duracion: {
     type: Sequelize.STRING,
   },
+  calendarUrl: {
+    type: Sequelize.STRING,
+  },
 });
