@@ -1,0 +1,30 @@
+section.section.section-lg.bg-default.text-center.py-0.my-0.section-testimonials
+    #testimonial-carousel.owl-carousel.owl-loaded(data-items='1' data-lg-items='3' data-dots='true' data-nav='false' data-stage-padding='15' data-loop='true' data-autoplay='true' data-margin='30' data-mouse-drag='false' style='')
+        .owl-stage-outer
+            .owl-stage(style='transform: translate3d(-1236px, 0px, 0px); transition: all 0.7s ease 0s; width: 2194px; padding-left: 15px; padding-right: 15px;')
+                each testimonio in testimoniales
+                    .owl-item(style='width: 279.091px; margin-right: 30px;')
+                        include ./testimonialCard.pug
+
+
+script.
+    $(document).ready(function() {
+        $("#testimonial-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            autoplay: true, 
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                },
+            }
+        });
+    });

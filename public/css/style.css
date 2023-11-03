@@ -218,7 +218,7 @@ footer .nav a,
   }
 
   .ver-todos {
-    width: 50%;
+    width: 53%;
     margin: 0 auto;
   }
 
@@ -256,7 +256,7 @@ i {
   font-size: 0.8rem;
   font-weight: normal;
 }
-.testimoniales p::before {
+/* .testimoniales p::before {
   background-image: url(../img/quote.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -266,7 +266,7 @@ i {
   height: 40px;
   display: block;
   margin-bottom: 1rem;
-}
+} */
 .blockquote-footer {
   text-align: right;
   color: #dc135f;

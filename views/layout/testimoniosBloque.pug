@@ -1,10 +1,4 @@
-.row.testimoniales
-    each testimonio in testimoniales
-        .col-md-6.col-lg-4.mb-4
-            .card.mb-3
-                .card-body
-                    blockquote.blockquote
-                    p.mb-0
-                    h4= testimonio.mensaje
-                    footer.blockquote-footer
-                        span= testimonio.nombre
+section.section.section-lg.bg-default.text-center.py-0.my-0.section-testimonials
+    .testimoniales
+        each testimonio in testimoniales
+            include ./testimonialCard.pug

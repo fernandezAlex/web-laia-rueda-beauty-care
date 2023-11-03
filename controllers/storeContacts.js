@@ -105,7 +105,7 @@ export const storeContacts = async (req, res) => {
         content: content.contacto,
         treatments,
         success:
-          "Tu solicitud de información ha sido enviada correctamente, dentro de un plazo 48 horas me pondré en contacto contigo.",
+          "Tu solicitud de información ha sido enviada correctamente, en un plazo 48 horas me pondré en contacto contigo.",
       });
     } catch (error) {
       console.log(

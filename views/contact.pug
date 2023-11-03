@@ -3,8 +3,9 @@ extends ./layout/index
 block content
     main.container.mt-5
         h1(class= "mb-5 text-center") #{content.title}
-            p.mb-5 Contacta para cualquier duda que tengas o si quieres pedir en alguno de mi servicio.
-            h6.toast-message-form #{success}
+            p.mb-5 Contacta para cualquier duda que tengas o solicitar inforamción en alguno de mis servicios.
+            if(success)
+                h6.toast-message-form #{success}
         .row.mt-5x
             .row.justify-content-center.col.mb-5.mt-8
                 .col-md-8 
