@@ -225,6 +225,9 @@ footer .nav a,
   h3 {
     font-size: 2rem;
   }
+  .logo {
+    padding-left: 0.5rem;
+  }
 }
 
 .descuento .contenido {
