@@ -252,21 +252,19 @@ i {
   font-size: 2rem;
 }
 
+.testimoniales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
 .testimoniales p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: normal;
 }
-/* .testimoniales p::before {
-  background-image: url(../img/quote.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 40px;
-  content: "";
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin-bottom: 1rem;
-} */
+
 .blockquote-footer {
   text-align: right;
   color: #dc135f;

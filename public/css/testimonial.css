@@ -148,7 +148,7 @@ h4 {
 .testimonial-container .quote-corporate {
   position: relative;
   padding: 40px 30px;
-  max-width: 326px;
+  max-width: 356px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 0 22px rgba(0, 0, 0, 0.1);
@@ -156,27 +156,29 @@ h4 {
   margin-bottom: 38px;
   background: #ffffff;
   margin-bottom: 60px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  width: 100%;
 }
 .quote-corporate .quote-header {
-  display: flex;
-  align-items: flex-end;
+  display: block;
 }
 .quote-corporate .quote-header > * {
-  margin-right: 15px;
   margin-top: 0;
 }
-.quote-corporate .quote-header h4 {
-  padding-right: 15px;
-  font-weight: 400;
-  border-right: 1px solid #d5d5d5;
-}
+
 .quote-corporate .quote-image {
   position: absolute;
+  max-height: 100px;
+  max-width: 90px;
   display: inline-block;
   overflow: hidden;
   left: 30px;
   bottom: -40px;
   border-radius: 50%;
+  vertical-align: middle;
+  align-self: center;
   box-shadow: 2px 0 9px rgba(0, 0, 0, 0.1);
 }
 .quote-corporate .quote-body {

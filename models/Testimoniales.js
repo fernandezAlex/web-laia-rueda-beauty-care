@@ -11,4 +11,13 @@ export const Testimonial = db.define("testimonios", {
   mensaje: {
     type: Sequelize.STRING,
   },
+  img: {
+    type: Sequelize.STRING,
+  },
+  stars: {
+    type: Sequelize.STRING,
+  },
+  service: {
+    type: Sequelize.STRING,
+  },
 });

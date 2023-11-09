@@ -41,7 +41,9 @@ block content
                         .form-group
                             label(for='preguntas') Preguntas
                             textarea#preguntas(name='preguntas' class='form-control' placeholder='Preguntas del tratamiento' rows='3')= preguntas
-
+                        .form-group
+                            label(for='calendarUrl') Pedir cita botón link Calendario
+                            textarea#calendarUrl(name='calendarUrl' class='form-control' placeholder='Link del calendario creado de este servicio' rows='1')= calendarUrl
                         .col-md-6
                         if(errores)
                             each error in errores 

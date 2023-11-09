@@ -15,7 +15,6 @@ export const treatmentController = async (req, res) => {
     path.basename(req.file.path)
   );
 
-  // Resto del código de tu controlador
   const {
     nombre,
     precio,
@@ -26,6 +25,7 @@ export const treatmentController = async (req, res) => {
     efectos,
     preguntas,
     duracion,
+    calendarUrl,
   } = req.body;
   const errores = [];
 
@@ -43,7 +43,7 @@ export const treatmentController = async (req, res) => {
 
   if (errores.length > 0) {
     // Check if there are some testimonial in the data base to render
-    const testimoniales = await Testimonial.findAll();
+    const treatments = await Treatment.findAll();
 
     // show the view of testimonials with errors
     res.render("adminTratamientos", {
@@ -52,7 +52,7 @@ export const treatmentController = async (req, res) => {
       nombre,
       correo,
       mensaje,
-      testimoniales,
+      treatments,
     });
   } else {
     // Store in the data base
@@ -68,6 +68,7 @@ export const treatmentController = async (req, res) => {
         efectos,
         preguntas,
         duracion,
+        calendarUrl,
       });
       res.redirect("/servicios-administrador");
     } catch (error) {
