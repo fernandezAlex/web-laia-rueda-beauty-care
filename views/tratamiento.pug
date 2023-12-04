@@ -29,16 +29,21 @@ block content
                 p #{result.descripcion}
 
             .container.mt-5.justify-content-center.mb-5
-                h4.my-6 Beneficios de #{result.nombre.toLowerCase()} 
+                h4.my-6 Beneficios de #{result.nombre.toLowerCase()}
+                br 
                 p #{result.beneficios}
                 <br>
-                each faq, index in faqs
-                    h4.my-6 ¿#{faq[0]}?
-                    p= faq[1]
-                <br>
+
+                if(faq)
+                    each faq, index in faqs
+                        h4.my-6 ¿#{faq[0]}?
+                        p= faq[1]
+                br
                 h4.my-6 Cuidados
+                br
                 p #{result.cuidados}
                 <br>
 
                 h4.my-6 Posibles efectos secundarios
+                br
                 p #{result.efectos}

@@ -4,26 +4,26 @@ block content
     main.container.mt-5
         h2(class="section-header mb-5 text-center") #{content.title}
         include ./layout/testimoniosBloque.pug
-        .row.mt-5
-            .col-md-12.mt-2
-                h2.d-block.w-100.text-center Agregar un Testimonio 
+        //- .row.mt-5
+        //-     .col-md-12.mt-2
+        //-         h2.d-block.w-100.text-center Agregar un Testimonio 
 
-            .row.justify-content-center.col.mb-5.mt-8
-                .col-md-8 
-                    form(action="/testimonios" method="POST")
-                        .form-group
-                            label(for="nombre") Nombre 
-                            input#nombre(placeholder="Tu nombre" type="text" name="nombre" class="form-control", value= nombre)
-                        .form-group
-                            label(for="nombre") Correo Electrónico 
-                            input#correo(placeholder="Tu correo" type="text" name="correo" class="form-control", value= correo)
-                        .form-group
-                            label(for="mensaje") Mensaje 
-                            textarea#mensaje(placeholder="Tu opinion" name="mensaje" class="form-control", rows= 3)= mensaje
+            //- .row.justify-content-center.col.mb-5.mt-8
+            //-     .col-md-8 
+            //-         form(action="/testimonios" method="POST")
+            //-             .form-group
+            //-                 label(for="nombre") Nombre 
+            //-                 input#nombre(placeholder="Tu nombre" type="text" name="nombre" class="form-control", value= nombre)
+            //-             .form-group
+            //-                 label(for="nombre") Correo Electrónico 
+            //-                 input#correo(placeholder="Tu correo" type="text" name="correo" class="form-control", value= correo)
+            //-             .form-group
+            //-                 label(for="mensaje") Mensaje 
+            //-                 textarea#mensaje(placeholder="Tu opinion" name="mensaje" class="form-control", rows= 3)= mensaje
 
-                        .col-md-6
-                        if(errores)
-                            each error in errores 
-                                .alert.col.alert-danger.text-center= error.mensaje
+            //-             .col-md-6
+            //-             if(errores)
+            //-                 each error in errores 
+            //-                     .alert.col.alert-danger.text-center= error.mensaje
 
-                        input(type="submit").btn.btn-success.btn-block.w-50.text-center
+            //-             input(type="submit").btn.btn-success.btn-block.w-50.text-center
