@@ -29,6 +29,10 @@ export const treatmentController = async (req, res) => {
   } = req.body;
   const errores = [];
 
+  if (!preguntas || Object.keys(preguntas).length === 0) {
+    preguntas = {};
+  }
+
   if (nombre.trim() === "") {
     errores.push({ mensaje: "El nombre esta vacio" });
   }
