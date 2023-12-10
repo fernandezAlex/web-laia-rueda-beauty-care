@@ -26,25 +26,23 @@ block content
                     a.text-center.mx-0.pedir-cita-color(href=result.calendarUrl, class="btn btn-block") Pedir cita
 
 
-                p #{result.descripcion}
+                p !{descripcion}
 
             .container.mt-5.justify-content-center.mb-5
-                h4.my-6 Beneficios de #{result.nombre.toLowerCase()}
+                h4.my-6 Beneficios de !{result.nombre.toLowerCase()}
                 br 
-                p #{result.beneficios}
-                <br>
+                p !{beneficios}
 
                 if(faqs && faqs[0][0] !== "{}")
                     each faq, index in faqs
-                        h4.my-6 ¿#{faq[0]}?
-                        br
-                        p= faq[1]
+                        h4.my-6 ¿#{faq[0].trim()}?
+                        p !{faq[1].trim()}
                 br
                 h4.my-6 Cuidados
                 br
-                p #{result.cuidados}
+                p !{cuidados}
                 <br>
 
                 h4.my-6 Posibles efectos secundarios
                 br
-                p #{result.efectos}
+                p !{efectos}

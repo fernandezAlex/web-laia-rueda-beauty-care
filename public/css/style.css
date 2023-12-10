@@ -128,12 +128,10 @@ p {
   /* background-color: #f7cac9, */
   background-color: rgb(248, 203, 202);
   padding: 10px 20px;
-  position: sticky;
   top: 0;
   z-index: 10000;
 }
 header {
-  position: sticky;
   top: 0;
   z-index: 10000;
 }

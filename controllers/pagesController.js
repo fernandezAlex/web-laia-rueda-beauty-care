@@ -1,7 +1,7 @@
 import content from "../constants/content.js";
 import { Treatment } from "../models/Treatments.js";
 import { Testimonial } from "../models/Testimoniales.js";
-import { faqsGenerator } from "../helpers/helpers.js";
+import { faqsGenerator, formatText } from "../helpers/helpers.js";
 
 export const homePage = async (req, res) => {
   // consult 3 treatments in db in the same time with promise
@@ -47,11 +47,20 @@ export const treatmentPageDetails = async (req, res) => {
   const { servicio } = req.params;
   try {
     const result = await Treatment.findOne({ where: { slug: servicio } });
-    const { preguntas } = result;
+    const { preguntas, descripcion, beneficios, cuidados, efectos } = result;
+    const descripcionFormated = formatText(descripcion);
+    const beneficiosFormated = formatText(beneficios);
+    const cuidadosFormated = formatText(cuidados);
+    const efectosFormated = formatText(efectos);
+    // const resultFormated = [...result.descripcionFormated];
     const faqs = faqsGenerator(preguntas);
     res.render("tratamiento", {
       content: content.tratamientos,
-      result,
+      result: result,
+      descripcion: descripcionFormated,
+      beneficios: beneficiosFormated,
+      cuidados: cuidadosFormated,
+      efectos: efectosFormated,
       faqs,
     });
   } catch (error) {

@@ -23,13 +23,13 @@ export const Treatment = db.define("tratamientos", {
     type: Sequelize.STRING,
   },
   beneficios: {
-    type: Sequelize.JSON,
+    type: Sequelize.TEXT,
   },
   cuidados: {
-    type: Sequelize.JSON,
+    type: Sequelize.TEXT,
   },
   efectos: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
   },
   preguntas: {
     type: Sequelize.JSON,
