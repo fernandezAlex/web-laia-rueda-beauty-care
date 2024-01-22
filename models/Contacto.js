@@ -17,9 +17,6 @@ export const Contacto = db.define("contactos", {
   servicio: {
     type: Sequelize.STRING,
   },
-  correo: {
-    type: Sequelize.STRING,
-  },
   mensaje: {
     type: Sequelize.STRING,
   },
