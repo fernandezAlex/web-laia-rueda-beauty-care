@@ -11,22 +11,22 @@
                             h2= treatment.nombre
                     p= treatment.descripcion.substr(0,112) + '...' 
                     .card-bottom
-                        //- a.servicios-info(href=`servicios/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-block") Más información
+                        a.servicios-info(href=`servicios/${treatment.nombre.replace(/\s+/g, '-').toLowerCase()}`, class="btn btn-block") Más información
                         a.servicios-info(href=`servicios/${treatment.slug}`, class="btn btn-block") Más información
-                        a.pedir-cita-color(href=`${treatment.calendarUrl}`, class="btn btn-block") Pedir cita
-                        //- script.
-                        //-     (function() {
-                        //-         var target = document.currentScript;
-                        //-         window.addEventListener('load', function() {
-                        //-             calendar.schedulingButton.load({
-                        //-                 url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1mSyMtEL0yLDbw0YLvMDxiuoc4zyRCDsjxVRQZo661b5nVdrg77LX9EZeDY7XxTKfzVYfnOhK0?gv=true',
-                        //-                 color: '#ff5678',
-                        //-                 label: "Pedir cita",
-                        //-                 target,
-                        //-                 classes: ['pedir-cita-color', 'btn', 'btn-block']
-                        //-             });
-                        //-         });
-                        //-     })();
+                        //- a.pedir-cita-color(href=`${treatment.calendarUrl}`, class="btn btn-block") Pedir cita
+                        script.
+                            (function() {
+                                var target = document.currentScript;
+                                window.addEventListener('load', function() {
+                                    calendar.schedulingButton.load({
+                                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1mSyMtEL0yLDbw0YLvMDxiuoc4zyRCDsjxVRQZo661b5nVdrg77LX9EZeDY7XxTKfzVYfnOhK0?gv=true',
+                                        color: '#ff5678',
+                                        label: "Pedir cita",
+                                        target,
+                                        classes: ['pedir-cita-color', 'btn', 'btn-block']
+                                    });
+                                });
+                            })();
 
 
 
