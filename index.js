@@ -21,6 +21,10 @@ console.log(process.env.PORT);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+console.log(
+	`Conectando a la base de datos en el host: ${process.env.DB_HOST}, puerto: ${process.env.DB_PORT}`
+);
+
 // Connect data base
 db.authenticate()
 	.then(() => {
@@ -60,7 +64,6 @@ app.use(express.static("public"));
 
 // Add router
 app.use("/", router);
-
 
 app.listen(PORT, () => {
 	console.log(`el servidor esta funcionando en el puerto ${PORT}`);
