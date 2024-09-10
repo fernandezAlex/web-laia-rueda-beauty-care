@@ -1,17 +1,31 @@
 import Sequelize from "sequelize";
 import dotenv from "dotenv/config";
 
+// Determinar si estamos en producción o desarrollo
+const isProduction = process.env.NODE_ENV === "production";
+
+// Configuración de la base de datos según el entorno
+const dbConfig = {
+	host: isProduction ? process.env.DB_HOST : process.env.DB_HOST_DEV,
+	port: isProduction ? process.env.DB_PORT : process.env.DB_PORT_DEV,
+	database: isProduction ? process.env.DB_NAME : process.env.DB_NAME_DEV,
+	username: isProduction ? process.env.DB_USER : process.env.DB_USER_DEV,
+	password: isProduction ? process.env.DB_PASS : process.env.DB_PASS_DEV,
+};
+
+// Mensaje de conexión para verificar a qué base de datos te estás conectando
 console.log(
-	`Conectando a la base de datos en el host: ${process.env.DB_HOST}, puerto: ${process.env.DB_PORT}, ${process.env.DB_NAME} con usuario: ${process.env.DB_USER}`
+	`Conectando a la base de datos en el host: ${dbConfig.host}, puerto: ${dbConfig.port}, ${dbConfig.database}`
 );
 
+// Crear la instancia de Sequelize con la configuración adecuada
 const db = new Sequelize(
-	process.env.DB_NAME,
-	process.env.DB_USER,
-	process.env.DB_PASS,
+	dbConfig.database,
+	dbConfig.username,
+	dbConfig.password,
 	{
-		host: process.env.DB_HOST,
-		port: process.env.DB_PORT,
+		host: dbConfig.host,
+		port: dbConfig.port,
 		dialect: "mysql",
 		define: {
 			timestamps: false,

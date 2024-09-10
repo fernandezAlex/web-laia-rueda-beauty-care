@@ -15,15 +15,10 @@ if (process.env.NODE_ENV !== "production") {
 }
 const app = express();
 const PORT = process.env.PORT || 4000;
-console.log(process.env.PORT);
 
 // Create __dirname variable
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-console.log(
-	`Conectando a la base de datos en el host: ${process.env.DB_HOST}, puerto: ${process.env.DB_PORT}`
-);
 
 // Connect data base
 db.authenticate()
