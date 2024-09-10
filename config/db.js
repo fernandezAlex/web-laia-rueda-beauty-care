@@ -1,29 +1,30 @@
 import Sequelize from "sequelize";
+import dotenv from "dotenv/config";
 
 console.log(
-	`Conectando a la base de datos en el host: ${process.env.DB_HOST}, puerto: ${process.env.DB_PORT}, ${process.env.DB_NAME} con usuario: ${process.env.DB_USER} y password: ${process.env.DB_PASS}, URL: ${process.env.DATABASE_URL}`
+	`Conectando a la base de datos en el host: ${process.env.DB_HOST}, puerto: ${process.env.DB_PORT}, ${process.env.DB_NAME} con usuario: ${process.env.DB_USER}`
 );
 
-const db = process.env.DATABASE_URL
-	? new Sequelize(process.env.DATABASE_URL)
-	: new Sequelize({
-			host: process.env.DB_HOST,
-			port: process.env.DB_PORT,
-			database: process.env.DB_NAME,
-			username: process.env.DB_USER,
-			password: process.env.DB_PASS,
-			dialect: "mysql",
-			define: {
-				timestamps: false,
-			},
-			pool: {
-				max: 5,
-				min: 0,
-				acquire: 30000,
-				idle: 10000,
-			},
-			operatorAliases: false,
-	  });
+const db = new Sequelize(
+	process.env.DB_NAME,
+	process.env.DB_USER,
+	process.env.DB_PASS,
+	{
+		host: process.env.DB_HOST,
+		port: process.env.DB_PORT,
+		dialect: "mysql",
+		define: {
+			timestamps: false,
+		},
+		pool: {
+			max: 5,
+			min: 0,
+			acquire: 30000,
+			idle: 10000,
+		},
+		operatorAliases: false,
+	}
+);
 
 // Autenticar la base de datos
 db.authenticate()
