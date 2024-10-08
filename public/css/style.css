@@ -199,6 +199,9 @@ footer .nav a,
       ),
       url(../img/ofert-banner-desktop.jpg);
   }
+  .min-h-400 {
+    min-height: 400px !important; 
+  }
 }
 @media (max-width: 768px) {
   footer .nav a span {

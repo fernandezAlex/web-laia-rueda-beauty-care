@@ -5,9 +5,9 @@ block content
         h2.text-center.mb-5 #{result.nombre}
         .row 
             .col-md-6.text-center
-                img(src=`${result.imagen}`, alt=`tratamiento de ${result.nombre}` class="img-fluid")
+                img(src=`${result.imagen}`, alt=`tratamiento de ${result.nombre}` class="img-fluid-full-h min-h-400")
             .col-md-6
-                ul.my-4.list-unstyled
+                ul.my-4.list-unstyled.text-center.text-md-left
                     li 
                         svg.icon.icon-tabler.icon-tabler-clock(xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewbox='0 0 24 24' stroke-width='1.5' stroke='#F8CBCA' fill='none' stroke-linecap='round' stroke-linejoin='round')
                             path(stroke='none' d='M0 0h24v24H0z' fill='none')
@@ -23,7 +23,7 @@ block content
                         //- h5.d-inline.pl-2 Precio: 
                         //- strong.d-inline #{result.precio}€
                     <br/>
-                    a.text-center.mx-0.pedir-cita-color(href=result.calendarUrl, class="btn btn-block") Pedir cita
+                    a.text-center.mx-0.pedir-cita-color(href=result.calendarUrl, class="btn") Pedir cita
 
 
                 p !{descripcion}
